@@ -1,43 +1,63 @@
 import './App.css';
 import Axios from 'axios';
-import { useState } from 'react';
-import Fetching1 from './Fetching1';
+import { useEffect, useState } from 'react';
+import CatFacts from './CatFacts';
+import Predicter from './Predicter';
 
 
 function App() {
+  
+  const [partyExcuse, setPartyExcuse] = useState("")
+  const [familyExcuse, setFamilyExcuse] = useState("")
+  const [officeExcuse, setOfficeExcuse] = useState("")
 
-  const [name, setName] = useState("")
-  const [predicted, setPredicted] = useState(null)
+  const fetchPartyExcuse = () => {
+    Axios.get("https://excuser-three.vercel.app/v1/excuse/party/")
+    .then((res) => {
+      setPartyExcuse(res.data[0].excuse)
+    })
+  }
 
-  const fetchData = async (e) => {
-    e.preventDefault();
-    const response = await 
-    Axios.get(`https://api.agify.io/?name=${name}`)
-    setPredicted(response.data);
-    setName('');
-}
+  const fetchFamilyExcuse = () => {
+    Axios.get("https://excuser-three.vercel.app/v1/excuse/family/")
+    .then((res) => {
+      setFamilyExcuse(res.data[0].excuse)
+    })
+  }
+
+  const fetchOfficeExcuse = () => {
+    Axios.get("https://excuser-three.vercel.app/v1/excuse/office/")
+    .then((res) => {
+      setOfficeExcuse(res.data[0].excuse)
+    })
+  }
+
+  console.log(partyExcuse)
+  console.log(familyExcuse)
+  console.log(officeExcuse)
+
+  useEffect(() => {
+    fetchPartyExcuse()
+    fetchFamilyExcuse()
+    fetchOfficeExcuse()
+  }, [])
 
   return (
     <div className='App'>
-      <form onSubmit={() => {
-        fetchData(name);
-      }}>
-      <input 
-      placeholder='"Enter Name"'
-      value={name} 
-      onChange={(event) => {setName(event.target.value)}}
-      />
-
-      <button 
-      onClick={fetchData}>Predict Age & Count</button>
+      <h1>Generate An Excuse</h1>
       
-      <h1>Name: {predicted?.name}</h1>
-      <h1>Predicted Age: {predicted?.age}</h1>
-      <h1>Count: {predicted?.count}</h1>
-      </form>
+      <button onClick={fetchPartyExcuse}>Party</button>
+      <button onClick={fetchFamilyExcuse}>Family</button>
+      <button onClick={fetchOfficeExcuse}>Office</button>
 
+      <p>
+        {partyExcuse}
+        {familyExcuse}
+        {officeExcuse}
+      </p>
 
-      <Fetching1 />
+      <Predicter />
+      <CatFacts />
     </div>
   )
 }

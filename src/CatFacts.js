@@ -1,8 +1,8 @@
-import "./Fetching1.css";
+import "./CatFacts.css";
 import Axios from 'axios';
 import { useEffect, useState } from 'react';
 
-function Fetching1() {
+function CatFacts() {
 
 // 1.-- Fetching API via fetch  
 
@@ -33,7 +33,7 @@ useEffect(() => {
 }, [])
   
   return (
-    <div className='Fetching1'>
+    <div className='catfacts'>
       <button onClick={fetchCatFact}>
         Generate Cat Fact</button>
       <p>{catFact}</p>
@@ -41,4 +41,4 @@ useEffect(() => {
   )
 }
 
-export default Fetching1;
+export default CatFacts;
