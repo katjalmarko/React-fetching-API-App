@@ -17,6 +17,8 @@ function Predicter() {
 
   return (
     <div className='predicter'>
+      <h1>Name Predicter</h1>
+
       <form onSubmit={() => {
         fetchData(name);
       }}>
@@ -29,9 +31,12 @@ function Predicter() {
       <button 
       onClick={fetchData}>Predict Age & Count</button>
       
-      <h1>Name: {predicted?.name}</h1>
-      <h1>Predicted Age: {predicted?.age}</h1>
-      <h1>Count: {predicted?.count}</h1>
+      <div className='predictresponse'>
+      <h2>Name: <span style={{color: "white"}}>"{predicted?.name}"</span></h2>
+      <h2>Predicted Age: <span style={{color: "white"}}>"{predicted?.age}"</span></h2>
+      <h2>Count: <span style={{color: "white"}}>"{predicted?.count}"</span></h2>
+      </div>
+
       </form>
     </div>
   )

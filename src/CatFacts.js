@@ -34,9 +34,12 @@ useEffect(() => {
   
   return (
     <div className='catfacts'>
+      <h1>Cat Facts Generator</h1>
       <button onClick={fetchCatFact}>
         Generate Cat Fact</button>
-      <p>{catFact}</p>
+      <div className="catresponse">
+        <p>{catFact}</p>
+      </div>
     </div>
   )
 }

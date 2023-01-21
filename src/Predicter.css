@@ -1,3 +1,64 @@
 .predicter {
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.predicter h1 {
+  background-color: rgb(120, 99, 77);
+  width: 100%vp;
+  margin-bottom: 10px;
+  padding: 5px 400px;
+  font-size: 35px;
+  letter-spacing: 18.9px;
+}
+
+.predicter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.predicter input {
+  font-size: 20px;
+  margin: 10px;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  border: none;
+  width: 290px;
+  margin-bottom: 15px;
+}
+
+.predicter button {
+  font-size: 20px;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  width: 210px;
+}
+
+.predicter button:hover {
+  background-color: #3e8e41;
+  cursor: pointer;
+}
+
+.predicter button:active {
+  background-color: #327034;
+}
+
+.predicter h2 {
+  font-size: 25px;
+}
+
+.predictresponse {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
 }
