@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(131, 113, 94);
+  background-image: url(/src/bckgrnd/1.jpg);
 }
 
 .App h1 {
@@ -11,9 +11,10 @@ body {
   margin-top: 0px;
   margin-bottom: 0;
   padding: 18px;
-  background-color: rgb(107, 88, 68);
+  background-color: rgba(0, 0, 0, 0.251);
   width: 100%vp;
   font-size: 35px;
   letter-spacing: 25.5px;
   margin-bottom: 10px;
+  color: rgb(255, 0, 255);
 }

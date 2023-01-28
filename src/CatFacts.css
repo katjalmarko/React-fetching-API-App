@@ -7,12 +7,14 @@
 }
 
 .catfacts h1 {
-  background-color: rgb(120, 99, 77);
+  background-color: rgba(0, 0, 0, 0.251);
+  border-radius: 50px;
   width: 100%vp;
   margin-bottom: 20px;
-  padding: 5px 400px;
+  padding: 5px 150px;
   font-size: 35px;
   letter-spacing: 10.9px;
+  color: white;
 }
 
 .catfacts button {
@@ -35,6 +37,10 @@
 
 .catfacts p {
   font-size: 19px;
+  background-color: rgba(0, 0, 0, 0.282);
+  border-radius: 50px;
+  color: rgb(255, 0, 255);
+  padding: 5px;
 }
 
 .catresponse {

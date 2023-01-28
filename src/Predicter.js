@@ -32,9 +32,9 @@ function Predicter() {
       onClick={fetchData}>Predict Age & Count</button>
       
       <div className='predictresponse'>
-      <h2>Name: <span style={{color: "white"}}>"{predicted?.name}"</span></h2>
-      <h2>Predicted Age: <span style={{color: "white"}}>"{predicted?.age}"</span></h2>
-      <h2>Count: <span style={{color: "white"}}>"{predicted?.count}"</span></h2>
+      <h2>Name: <span style={{color: "rgb(255, 0, 255)"}}>"{predicted?.name}"</span></h2>
+      <h2>Predicted Age: <span style={{color: "rgb(255, 0, 255)"}}>"{predicted?.age}"</span></h2>
+      <h2>Count: <span style={{color: "rgb(255, 0, 255)"}}>"{predicted?.count}"</span></h2>
       </div>
 
       </form>
